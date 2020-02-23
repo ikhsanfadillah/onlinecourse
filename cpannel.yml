@@ -1,4 +1,4 @@
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/u6829572/repository/production
-    - /bin/rsync -Paz * $DEPLOYPATH --delete
+        tasks:
+          - export DEPLOYPATH=/home/u6829572/repository/production
+          - /bin/cp -R * $DEPLOYPATH
