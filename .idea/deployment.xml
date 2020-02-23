@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Guru Semua">
+    <serverData>
+      <paths name="Guru Semua">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/onlinecourse" local="$PROJECT_DIR$" web="/" />
+            <mapping local="" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/onlinecourse/config/database.php" />
+            <excludedPath path="/onlinecourse/.env" />
+            <excludedPath path="/public_html/index.php" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

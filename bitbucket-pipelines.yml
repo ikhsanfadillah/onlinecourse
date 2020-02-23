@@ -1,0 +1,19 @@
+image: php:7.2-fpm
+
+pipelines:
+  default:
+      - step:
+          caches:
+          - composer
+          script:
+            - apt-get update && apt-get install -y unzip gnupg ssh
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install
+            - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+            - apt-get install -y nodejs
+            - npm update
+            - npm run production
+            - php -r "file_exists('.env') || copy('.env.pipelines', '.env');"
+            - composer dump-autoload
+            - php artisan key:generate
+            - php artisan migrate
