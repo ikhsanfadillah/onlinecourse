@@ -40,24 +40,23 @@
                                 </label>
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <button type="submit" class="btn--medium">
-                                {{ __('Login') }}
-                            </button>
+
                             @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             @endif
                         </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn--medium">
+                                {{ __('Login') }}
+                            </button>
+                        </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 offset-md-4">
-                                <hr>
-                                <a href="{{ url('/redirect') }}" class="btn btn-primary btn-block">
-                                    <i class="fab fa-google"></i> Login With Google</a>
-                            </div>
+                            <a href="{{ url('/redirect') }}" class="btn btn-primary btn-block">
+                                <i class="fab fa-google"></i> Login With Google</a>
                         </div>
 
                       </form>
